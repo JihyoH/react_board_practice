@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/react_board_practice/static/css/main.4388fadb.chunk.css",
+    "main.js": "/react_board_practice/static/js/main.cba3778b.chunk.js",
+    "main.js.map": "/react_board_practice/static/js/main.cba3778b.chunk.js.map",
+    "runtime-main.js": "/react_board_practice/static/js/runtime-main.a3b5301d.js",
+    "runtime-main.js.map": "/react_board_practice/static/js/runtime-main.a3b5301d.js.map",
+    "static/js/2.c3c34dec.chunk.js": "/react_board_practice/static/js/2.c3c34dec.chunk.js",
+    "static/js/2.c3c34dec.chunk.js.map": "/react_board_practice/static/js/2.c3c34dec.chunk.js.map",
+    "index.html": "/react_board_practice/index.html",
+    "precache-manifest.cbaef8a5ec9d0ccf872da5a092c792dc.js": "/react_board_practice/precache-manifest.cbaef8a5ec9d0ccf872da5a092c792dc.js",
+    "service-worker.js": "/react_board_practice/service-worker.js",
+    "static/css/main.4388fadb.chunk.css.map": "/react_board_practice/static/css/main.4388fadb.chunk.css.map",
+    "static/js/2.c3c34dec.chunk.js.LICENSE.txt": "/react_board_practice/static/js/2.c3c34dec.chunk.js.LICENSE.txt",
+    "static/media/stock-book1.jpg": "/react_board_practice/static/media/stock-book1.16a7a450.jpg",
+    "static/media/stock-book2.jpg": "/react_board_practice/static/media/stock-book2.d9291a32.jpg",
+    "static/media/stock-book3.jpg": "/react_board_practice/static/media/stock-book3.37deb96d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a3b5301d.js",
+    "static/js/2.c3c34dec.chunk.js",
+    "static/css/main.4388fadb.chunk.css",
+    "static/js/main.cba3778b.chunk.js"
+  ]
+}

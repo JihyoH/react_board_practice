@@ -10,15 +10,35 @@ class Subject extends Component{
     this.state = {
       title: this.props.title,
       sub: this.props.sub,
+      currstate: this.props.currstate,
       timer: ""
     };
 
   }
 
+  componentDidUpdate(prevProps, prevState){
+    if (this.props.currstate !== prevProps.currstate) {
+          this.setState({
+            currstate : this.props.currstate
+          });
+
+          if(this.props.currstate !== 1){
+            this.timer = setInterval(
+              () => this.swiperImg(), 3000
+            );
+          }else{
+            clearInterval(this.timer);
+          }
+      
+    }
+  }
+
   componentDidMount(){
-    this.timer = setInterval(
-      () => this.swiperImg(), 3000
-    );
+    if(this.props.currstate !== 1){
+      this.timer = setInterval(
+        () => this.swiperImg(), 3000
+      );
+    }
   }
 
   swiperImg(){

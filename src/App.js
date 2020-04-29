@@ -6,11 +6,18 @@ import './styles/Common.scss';
 class App extends Component{
   constructor(props) { // 제일 먼저 실행되어 초기화를 담당.
     super(props);
-    this.state = { // state 값 초기화
-      currstate: 1
+    this.state = {
+      currstate: 0,
+      customers:''
     }; 
 
     this.clickHandler = this.clickHandler.bind(this);
+  }
+
+  componentDidMount() {
+    this.callApi()
+      .then(res => this.setState({customers: res}))
+      .catch(err => console.log(err));
   }
 
   clickHandler =(e) =>{
@@ -18,6 +25,14 @@ class App extends Component{
     this.setState({
       currstate:this.state.currstate+1
     });
+  }
+
+  callApi = async () => {
+    const response = await fetch('/api/customers');
+    const body = await response.json();
+    console.log("1. ");
+    console.log(body);
+    return body;
   }
 
   render(){

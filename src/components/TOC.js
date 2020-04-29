@@ -31,16 +31,21 @@ class TOC extends Component{
 
   handleClick =(e) =>{
     e.preventDefault();
+    let stage = Number(e.target.textContent[0]);
+
     this.setState({
-      currstate: 2
+      currstate: stage
+    });
+  }
+
+  openMenu =(e)=>{
+    e.preventDefault();
+    this.setState({
+      currstate: 0
     });
   }
 
   render(){
-    function openMenu(){
-      console.log("openMenu");
-    }
-
     return(
       <div>
         <div className="searchwrapper">
@@ -53,14 +58,14 @@ class TOC extends Component{
           </div>
           <div className="navWrapper">
               <div className="navUl">
-                  <div className="navLi" onClick={openMenu}><span className="navTextWrapper"><span>전체</span></span></div>
-                  <div className="navLi" onClick={this.handleClick}><span className="navTextWrapper"><span>탭메뉴1</span></span></div>
-                  <div className="navLi" onClick={this.handleClick}><span className="navTextWrapper"><span>탭메뉴2</span></span></div>
-                  <div className="navLi" onClick={this.handleClick}><span className="navTextWrapper"><span>탭메뉴3</span></span></div>
-                  <div className="navLi" onClick={this.handleClick}><span className="navTextWrapper"><span>탭메뉴4</span></span></div>
+                  <div className="navLi" onClick={this.openMenu}><span className="navTextWrapper"><span>전체</span></span></div>
+                  <div className="navLi" onClick={this.handleClick}><span className="navTextWrapper"><span>1단계</span></span></div>
+                  <div className="navLi" onClick={this.handleClick}><span className="navTextWrapper"><span>2단계</span></span></div>
+                  <div className="navLi" onClick={this.handleClick}><span className="navTextWrapper"><span>3단계</span></span></div>
+                  <div className="navLi" onClick={this.handleClick}><span className="navTextWrapper"><span>4단계</span></span></div>
               </div>
           </div>
-          <div><Subject title={this.state.subject} sub={this.state.content}/></div>
+          <div><Subject title={this.state.subject} sub={this.state.content} currstate={this.state.currstate}/></div>
           <div><Content title={this.state.subject} currstate={this.state.currstate}/></div>
       </div>
       )

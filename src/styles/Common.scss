@@ -196,7 +196,7 @@ input:focus{ outline: none;}
 
 .currStateWrapper{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     position:relative;
 }
 
@@ -301,6 +301,9 @@ input:focus{ outline: none;}
         p{display:none;}
     }
     .mainBannerImgBox{width:100%; margin:0;}
+    .currStateWrapper{
+        justify-content: center;
+    }    
     .currStateTitle,.contentWrapper h2{
         font-size:1.2em;
     }

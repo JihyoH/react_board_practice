@@ -82,7 +82,7 @@ class Content extends Component{
           <div className="currStateWrapper">
             <div className="currState">기본 레이아웃 설계</div>
             <div className="currState">간단한 자바스크립트 효과</div>
-            <div className="currState">페이지 전환 효과</div>
+            <div className="currState">내용물 바꾸기</div>
             <div className="currState">DB 연결</div>
           </div>
         </div>
